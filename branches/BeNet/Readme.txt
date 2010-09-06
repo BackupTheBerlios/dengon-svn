@@ -48,8 +48,6 @@ Whisper BeNet v1.2 :
 	-Initial version, would be equivalent to Whisper 1.2
 
 BeNet 1.3:
-	- Port to Haiku gcc2 by Maxim Sokhatsky
-
-TODO 1.4:
+	- Port to Haiku gcc4 by Maxim Sokhatsky
 	- Remove libSanta dependency
 

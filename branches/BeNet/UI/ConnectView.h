@@ -35,7 +35,7 @@ public:
 	char*			GetEmail()						{return (char*)m_pEmail->Text();}
 	char*			GetFirstName()					{return (char*)m_pFirstName->Text();}
 	char*			GetLastName()					{return (char*)m_pLastName->Text();}
-	BookmarkItem*	GetConnectionInfo() 			{return m_pBookmarkItem;}
+	//BookmarkItem*	GetConnectionInfo() 			{return m_pBookmarkItem;}
 	bool			IsServerNeeded()				{return (bool)m_pRadioPersonal->Value();}
 	void			Online();
 	void			Offline();
@@ -49,8 +49,8 @@ private:
 	BTextControl*		m_pFirstName;
 	BTextControl*		m_pEmail;
 	BTextControl*		m_pIP;
-	BookmarksShortcut*	m_pBookmarksShortcut;
-	BookmarkItem*		m_pBookmarkItem;
+	//BookmarksShortcut*	m_pBookmarksShortcut;
+	//BookmarkItem*		m_pBookmarkItem;
 	BMenuField*			m_pShortcutField;
 	BBox*				m_pBoxPersonal;
 	BBox*				m_pBoxIP;

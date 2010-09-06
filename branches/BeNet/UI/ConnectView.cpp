@@ -6,6 +6,8 @@
 #include "Output.h"
 #endif
 
+#include <PopUpMenu.h>
+
 #ifndef _BeNetMenu_h
 #include "BeNetMenu.h"
 #endif
@@ -154,7 +156,7 @@ ConnectView::MessageReceived(BMessage *message)
    			// OliverESP: when a new bookmark is added we remake the shortcut-> BUG
    			m_pBoxPersonal->RemoveChild(m_pShortcutField); // this fixs it
    			
-   			delete m_pBookmarksShortcut;
+   			//delete m_pBookmarksShortcut;
    			RemoveChild(m_pShortcutField);
    			BuildShortcutMenu();
    			break;
@@ -187,10 +189,10 @@ ConnectView::BuildShortcutMenu()
 	/*
 	m_pBookmarksShortcut = new BookmarksShortcut();
 	m_pBookmarksShortcut->SetRadioMode(true);
-	
-	m_pBoxPersonal->AddChild(m_pShortcutField = new BMenuField(BRect(5, 85, 200, 90), "shortcutField", NULL, m_pBookmarksShortcut));
-	m_pShortcutField->SetEnabled((bool)m_pRadioPersonal->Value());
 	*/
+	m_pBoxPersonal->AddChild(m_pShortcutField = new BMenuField(BRect(5, 85, 200, 90), "shortcutField", NULL, new BPopUpMenu("Bookmarks")));
+	m_pShortcutField->SetEnabled((bool)m_pRadioPersonal->Value());
+	
 }
 
 void
