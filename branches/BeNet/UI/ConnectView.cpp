@@ -10,9 +10,9 @@
 #include "BeNetMenu.h"
 #endif
 
-#ifndef _BookmarkItem_h_
-#include "BookmarkItem.h"
-#endif
+//#ifndef _BookmarkItem_h_
+//#include "BookmarkItem.h"
+//#endif
 
 #ifndef _Def_h
 #include "Def.h"
@@ -123,18 +123,21 @@ ConnectView::MessageReceived(BMessage *message)
 	{
    		case MENU_BOOKMARKS:
    		{
+   			/* mes
+   			
 			char *name = new char[256];
 			char *surname = new char[256];
 			
  			strcpy(name, (char*)message->FindString("Bookmark_name"));
 			strcpy(surname, (char*)message->FindString("Bookmark_surname"));						
-			
+			*/
 			
 //			BMenuItem *item; 
 //	        message->FindPointer("source",(void **)&item); 	
 //			strcpy(v_pString, item->Label());						
 			
 			
+			/* mes
 			m_pBookmarkItem = Bookmarks::Instance()->FindBookmarkItem(name,surname);
 			
 			m_pLastName->SetText(m_pBookmarkItem->GetColumnContentText(0));
@@ -143,6 +146,7 @@ ConnectView::MessageReceived(BMessage *message)
    			
  			delete name;
  			delete surname;
+ 			*/
    			break;
    		}
    		case MSG_MENU_SAVE:
@@ -180,11 +184,13 @@ ConnectView::MessageReceived(BMessage *message)
 void
 ConnectView::BuildShortcutMenu()
 {
+	/*
 	m_pBookmarksShortcut = new BookmarksShortcut();
 	m_pBookmarksShortcut->SetRadioMode(true);
 	
 	m_pBoxPersonal->AddChild(m_pShortcutField = new BMenuField(BRect(5, 85, 200, 90), "shortcutField", NULL, m_pBookmarksShortcut));
 	m_pShortcutField->SetEnabled((bool)m_pRadioPersonal->Value());
+	*/
 }
 
 void

@@ -34,7 +34,7 @@
 
 BeNetWindow::BeNetWindow() :
 	BWindow(BRect(0,0,230,209),_T("Whisper"), B_TITLED_WINDOW, B_NOT_RESIZABLE | B_NOT_ZOOMABLE),
-	m_pBookmarksWindow(NULL),
+	//m_pBookmarksWindow(NULL),
 	m_pPreferencesWindow(NULL),
 	m_bShowStatusBar(true),
 	m_bShowToolBar(true),
@@ -95,8 +95,8 @@ BeNetWindow::BeNetWindow() :
 	m_pRemoteWindow = new RemoteWindow(this);
 	m_pRemoteWindow->Run();
 
-	m_pBookmarksWindow = new BookmarksWindow(m_pConnectView);
-	m_pBookmarksWindow->Run();
+	//m_pBookmarksWindow = new BookmarksWindow(m_pConnectView);
+	//m_pBookmarksWindow->Run();
 
 	m_pPreferencesWindow = new PreferencesWindow;
 	m_pPreferencesWindow->Run();
@@ -109,8 +109,8 @@ BeNetWindow::BeNetWindow() :
 	if (Preferences::Instance()->OnlineOnStartup())
 		GoOnline();
 
-	if (Preferences::Instance()->ShowBookmarks())
-		ShowWindow(m_pBookmarksWindow);
+	//if (Preferences::Instance()->ShowBookmarks())
+	//	ShowWindow(m_pBookmarksWindow);
 
 	if (Preferences::Instance()->ShowOutput())
 		ShowWindow(Output::Instance());
@@ -122,8 +122,8 @@ BeNetWindow::~BeNetWindow()
 	m_pRemoteWindow->Lock();
 	m_pRemoteWindow->Quit();
 
-	m_pBookmarksWindow->Lock();
-	m_pBookmarksWindow->Quit();
+	//m_pBookmarksWindow->Lock();
+	//m_pBookmarksWindow->Quit();
 
 	m_pPreferencesWindow->Lock();
 	m_pPreferencesWindow->Quit();
@@ -163,7 +163,7 @@ BeNetWindow::MessageReceived(BMessage* msg)
 		case MSG_MENU_ABOUT:			ShowWindow(m_pAboutWindow); break;
 		case MSG_MENU_OUTPUTWINDOW:		ShowWindow(Output::Instance()); break; 
 		case MSG_MENU_PREFERENCES:		ShowWindow(m_pPreferencesWindow); break; 
-		case MSG_MENU_BOOKMARKS:		ShowWindow(m_pBookmarksWindow); break; 
+		//case MSG_MENU_BOOKMARKS:		ShowWindow(m_pBookmarksWindow); break; 
 		case MSG_MENU_MAILIP:			ShowMailIPWindow(); break; 
 		case MSG_MENU_HELP:				LaunchHelp(); break; 
 		case MENU_BOOKMARKS:			m_pConnectView->MessageReceived(msg); break;

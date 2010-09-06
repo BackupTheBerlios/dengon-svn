@@ -87,7 +87,7 @@ public:
 
 private: // Data
 	RemoteWindow*		m_pRemoteWindow;
-	BookmarksWindow*	m_pBookmarksWindow;
+	//BookmarksWindow*	m_pBookmarksWindow;
 	PreferencesWindow*	m_pPreferencesWindow;
 	AboutWindow*		m_pAboutWindow;
 	BeNetMailIPWindow*	m_pMailIPWindow;
