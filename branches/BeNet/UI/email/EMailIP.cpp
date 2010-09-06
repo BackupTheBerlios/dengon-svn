@@ -210,6 +210,7 @@ PEOPLE_ID_NODE* EMailIP::GetInfo(BFile * pFile)
 	
 	
 	//Trouver le nom image
+	/*
 	if(FindString(pFile, "Encoding: base64"))
 	{
 		pFile->Read(pzBuffer, 2);	//Lire les deux endline.
@@ -226,6 +227,7 @@ PEOPLE_ID_NODE* EMailIP::GetInfo(BFile * pFile)
 
 		filePicture.Unset();		
 	}
+	*/
 	return pNode;
 }
 
