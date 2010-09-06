@@ -6,7 +6,7 @@ LIBS= /boot/system/lib/gcc4/libbe.so /boot/system/lib/gcc4/libmail.so /boot/syst
 LIBPATHS=
 SYSTEM_INCLUDE_PATHS= /boot/develop/headers/be /boot/develop/headers/cpp /boot/develop/headers/posix
 LOCAL_INCLUDE_PATHS= Audio Audio/mediarecorder Audio/codec UI/email UI UI/BookmarkTools Network boot/home/whisper/whisperbenet/Audio boot/home/whisper/whisperbenet/UI boot/home/whisper/whisperbenet/UI/BookmarkTools boot/home/whisper/whisperbenet/UI/email boot/home/whisper/whisperbenet/Network boot/home/whisper/whisperbenet/Audio/codec boot/home/whisper/whisperbenet/Audio/mediarecorder
-OPTIMIZE=NONE
+OPTIMIZE=-Os
 #	specify any preprocessor symbols to be defined.  The symbols will not
 #	have their values set automatically; you must supply the value (if any)
 #	to use.  For example, setting DEFINES to "DEBUG=1" will cause the
